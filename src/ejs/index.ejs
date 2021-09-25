@@ -2,7 +2,7 @@
 <html lang="ja">
 <%- include('./common/_head') %>
   <body>
-    <%- include('./common/_top-header') %>
+    <!-- <%- include('./common/_top-header') %>
       <%- include('./parts/_c-btn',{text:'これはテストです', link:'#'}) %>
     <%- include('./common/_footer') %>
 
@@ -10,6 +10,38 @@
     <% for (var i=0; i < 4; i++) { %>
       <%- include('./parts/_c-btn',{text:'これはテストです', link:'#'}) %>
       <% } %>
+
+
+      <% let page = "<p>top </p>" %>
+      <p><%- page  %></p>
+      <p><%= page  %></p>
+
+
+      <% for (var i=0; i < 3; i++) { %>
+        <%- include('./parts/_c-btn',{text:'これはテストです', link:'#'}) %>
+        <% } %>
+   -->
+
+
+        <!-- ブログセクションのEJS化 -->
+      <section id="blog" class="section news l-section">
+        <div class="news__inner l-inner">
+          <h2 class="section__title news__title">
+            <span>ブログ</span>
+          </h2>
+  
+          <div class="  p-cards">
+
+            <% for (var i=0; i < 3; i++) { %>
+              <%- include('./parts/_p-card',{count:i, link:'#'}) %>
+              <% } %>
+
+          </div>
+          <!--  news-items終わり -->
+        </div>
+        <!--  news-inner終わり -->
+        <!-- リンク用ボタン -->
+      </section>
 
 
 

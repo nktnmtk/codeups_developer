@@ -1,0 +1,80 @@
+.p-card {
+  background-color: $background;
+
+  @include mq("tab") {
+    width: calc(33.3% - 30px * 2 / 3);
+  }
+}
+
+.p-card__image {
+  padding-top: calc((223 / 335) * 100%);
+  position: relative;
+  @include mq("tab") {
+    padding-top: 56%;
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include mq("tab") {
+    }
+  }
+}
+
+.p-card__inner {
+  background-color: #fff;
+  color: #333333;
+  padding: rem(4) rem(23) rem(16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include mq("tab") {
+  }
+}
+.p-card__title {
+  font-weight: 500;
+  font-size: rem(18);
+  letter-spacing: rem(1);
+  line-height: rem(35);
+
+  @include mq("tab") {
+  }
+}
+.p-card__text {
+  margin-top: rem(4);
+  font-size: rem(14);
+  line-height: rem(26);
+  letter-spacing: rem(1);
+  @include mq("tab") {
+    font-size: rem(14);
+  }
+}
+
+.p-card__items {
+  margin-top: rem(4);
+  display: flex;
+  justify-content: space-between;
+  @include mq("tab") {
+  }
+}
+.p-card__category {
+  width: rem(68);
+  padding: 0 rem(4);
+  background-color: #FFEA2E;
+  font-size: rem(14);
+  line-height: rem(26);
+  letter-spacing: rem(1);
+  @include mq("tab") {
+  }
+}
+.p-card__time {
+  font-size: rem(14);
+  line-height: rem(26);
+  letter-spacing: rem(1);
+  @include mq("tab") {
+  }
+}
