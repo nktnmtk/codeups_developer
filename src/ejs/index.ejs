@@ -23,23 +23,23 @@
    -->
 
 
-        <!-- ブログセクションのEJS化 -->
-      <section id="blog" class="section news l-section">
-        <div class="news__inner l-inner">
-          <h2 class="section__title news__title">
+      <!-- ブログセクション byとっぷ -->
+      <section id="p-blog" class="section p-blog l-section">
+        <div class="p-blog__inner l-inner">
+          <h2 class="l-section__title p-blog__title">
             <span>ブログ</span>
           </h2>
   
-          <div class="  p-cards">
+          <div class="p-blog__items  p-cards">
 
             <% for (var i=0; i < 3; i++) { %>
               <%- include('./parts/_p-card',{count:i, link:'#'}) %>
               <% } %>
 
           </div>
-          <!--  news-items終わり -->
+          <!--  p-blog-items終わり -->
         </div>
-        <!--  news-inner終わり -->
+        <!--  p-blog-inner終わり -->
         <!-- リンク用ボタン -->
       </section>
 
