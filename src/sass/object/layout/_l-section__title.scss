@@ -15,20 +15,20 @@
     top: 10%;
     left: 50%;                          
     transform: translate(-50%,-70%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    // justify-content: center;
+    // align-items: center;
     font-size: rem(50);
     font-family:$font-family-en;
     line-height: rem(72);
     color: #f9f871;
     opacity: 0.27;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     border-radius: 50%;
     @include mq(tab) {
       font-size: rem(110);
       line-height: rem(150);
-      letter-spacing: .08em;
+      letter-spacing: .01em;
     }
   }
 }

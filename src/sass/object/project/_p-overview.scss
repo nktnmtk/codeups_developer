@@ -1,0 +1,124 @@
+.p-overview {
+  @include mq(tab) {
+  }
+}
+.p-overview__inner {
+  @include mq(tab) {
+  }
+}
+
+.p-overview__title {
+  margin-top: rem(120);
+  @include mq(tab) {
+    margin-top: rem(213);
+  }
+
+  &::after {
+    content: "Overview";
+    @include mq(tab) {
+      top: 0%;
+      left: 0%;
+      transform: translate(3%, -30%);
+      max-width: rem(515);
+    }
+  }
+}
+.p-overview__items {
+  width: 100%;
+  @include mq(tab) {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    // align-items: center;
+
+    &::after {
+      content: "";
+      background: #333333;
+      width: 70%;
+      height: rem(550);
+      position: absolute;
+      top:0%;
+      left: 0;
+      // transform: translateY(-50% ) ;
+      z-index: -1;
+      
+
+    }
+  }
+}
+.p-overview__image {
+  margin-top: rem(48);
+  //親要素の幅を超えます
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  padding-top: calc((261 / 375) * 100%);
+  padding-top: 69.6%;
+  position: relative;
+  @include mq("tab") {
+    width: rem(557);
+    max-width: 100%;
+    margin: 0;
+    padding-top :0;
+     //親要素に対する幅×縦/横比でパーセントを出力
+    // padding-top: calc(  (557/1100)* (389 /557) * 100%);
+
+    &:before {
+      content:"";
+      display: block;
+      padding-top: calc( (389 /557) * 100%);/* 高さを幅の75%に固定 */
+  }
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include mq("tab") {
+    }
+  }
+}
+.p-overview__article {
+  padding: rem(24) rem(20) rem(21);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  background: #333333;
+  position: relative;
+
+  @include mq(tab) {
+    width: rem(510);
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    
+  
+  }
+
+}
+.p-overview__subtitle {
+  text-align: center;
+  font-size: rem(20);
+  line-height: rem(29);
+  letter-spacing: .15em;
+
+  @include mq(tab) {
+  }
+}
+.p-overview__text {
+  letter-spacing: .15em;
+  margin-top: rem(24);
+  @include mq(tab) {
+    margin-top: rem(48);
+  }
+}
+.p-overview__button {
+  @include mq(tab) {
+  }
+}
+.p-overview {
+  @include mq(tab) {
+  }
+}
