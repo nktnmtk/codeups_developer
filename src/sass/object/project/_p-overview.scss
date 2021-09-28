@@ -4,6 +4,7 @@
 }
 .p-overview__inner {
   @include mq(tab) {
+
   }
 }
 
@@ -29,19 +30,24 @@
     display: flex;
     flex-flow: row-reverse;
     justify-content: space-between;
-    // align-items: center;
-
-    &::after {
+    // background: #333333;
+    background:linear-gradient(to right , #333333 73.2%, transparent 73.2%);
+    // width: 70%;
+    padding: rem(80) 0;
+    margin-top: rem(48);
+    z-index: -1;
+    position: relative;
+    &:before {
       content: "";
-      background: #333333;
-      width: 70%;
-      height: rem(550);
       position: absolute;
-      top:0%;
-      left: 0;
-      // transform: translateY(-50% ) ;
-      z-index: -1;
-      
+      display: block;
+      top: 0;
+      left: rem(-600);
+      height  :100%;
+      width: rem(600);
+       background: #333333;
+       overflow: hidden;
+
 
     }
   }
@@ -58,15 +64,15 @@
     width: rem(557);
     max-width: 100%;
     margin: 0;
-    padding-top :0;
-     //親要素に対する幅×縦/横比でパーセントを出力
+    padding-top: 0;
+    //親要素に対する幅×縦/横比でパーセントを出力
     // padding-top: calc(  (557/1100)* (389 /557) * 100%);
 
     &:before {
-      content:"";
+      content: "";
       display: block;
-      padding-top: calc( (389 /557) * 100%);/* 高さを幅の75%に固定 */
-  }
+      padding-top: calc((389 / 557) * 100%); /* 高さを幅の75%に固定 */
+    }
   }
 
   img {
@@ -91,27 +97,30 @@
     width: rem(510);
     max-width: 100%;
     margin: 0;
+    margin-right: rem(23);
     padding: 0;
-
-    
-  
   }
-
 }
 .p-overview__subtitle {
   text-align: center;
   font-size: rem(20);
   line-height: rem(29);
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 
   @include mq(tab) {
+    margin-top: rem(20);
+    text-align: left;
+    font-size: rem(25);
+    line-height: rem(25);
   }
 }
 .p-overview__text {
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   margin-top: rem(24);
   @include mq(tab) {
     margin-top: rem(48);
+    line-height: rem(35);
+    letter-spacing: .04em;
   }
 }
 .p-overview__button {
